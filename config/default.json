@@ -1,3 +1,4 @@
 {
-    "mongoURI":"mongodb+srv://asaf123:asaf1234@mytube-sy0hu.mongodb.net/test?retryWrites=true&w=majority"
+    "mongoURI":"mongodb+srv://asaf123:asaf1234@mytube-sy0hu.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "secret"
 }
