@@ -11,7 +11,7 @@ var youTubeApi;
 if(process.env.NODE_ENV !== 'production'){
     youTubeApi = process.env.REACT_APP_YOU_TUBE_API;
 }else{
-    youTubeApi = process.YOU_TUBE_API;
+    youTubeApi = process.env.YOU_TUBE_API;
 }
 const YoutubeState = props => {
     
