@@ -9,7 +9,6 @@ const PORT = process.env.PORT || 5000;
 // Connect to DB
 connectDB();
 
-app.get('/',(req,res)=>res.json({msg: 'Welcome to MY-TUBE API'}));
 
 // Init Middleware
 app.use(cors());
