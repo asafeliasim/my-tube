@@ -29,7 +29,7 @@ const YoutubeState = props => {
         console.log(youTubeApi);
         
         setLoading();
-        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&key=${youTubeApi}&type=video&q&type=video&q=${text}`)
+        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyCJv2eNDsq-OZk1iD2QF4F-cyTQGORrii4&type=video&q&type=video&q=${text}`)
                 .then((response)=> response.json())
                 .then((responseJson)=>{
                     dispatch({
