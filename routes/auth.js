@@ -13,7 +13,7 @@ router.get('/',auth, async(req,res)=>{
     
     try{
         const user = await User.findOne({email: req.user.email}).select('-password');
-        
+        console.log(user);
         res.json(user);
     }catch(err){
         console.error(err.message);

@@ -12,6 +12,8 @@ import Login from './components/auth/Login';
 import Alerts from './components/layout/Alerts';
 import setAuthToken from './utils/setAuthToken';
 import PrivateRoute from './components/routing/PrivateRoute';
+import VideoState from './context/videos/VideoState';
+import UserPlayList from './components/playlist/UserPlaylist';
 
 if(localStorage.token){
   setAuthToken(localStorage.token);
@@ -21,6 +23,7 @@ const App =()=> {
 <AuthState>
   <YoutubeState>
         <AlertState>
+          <VideoState>
           <Router>
             <Fragment>
               <Navbar/>
@@ -30,11 +33,13 @@ const App =()=> {
                   <PrivateRoute exact path="/" component={Home}/>
                   <Route exact path="/about" component={About}/>
                   <Route exact path="/register" component={Register}/>
+                  <Route exact path="/playlist" component={UserPlayList}/>
                   <Route exact path="/login" component={Login}/>
                 </Switch>
               </div>
             </Fragment>
           </Router>
+          </VideoState>
         </AlertState>
     </YoutubeState>
     </AuthState>

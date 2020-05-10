@@ -18,6 +18,9 @@ const Navbar =({title})=> {
                     <Link to='/home'>Home</Link>
             </li>
             <li>
+                    <Link to='/playlist'>PlayList</Link>
+            </li>
+            <li>
                 <a onClick={onLogout} href="/">
                     <FiLogOut/> <span className="hide-sm">Logout</span>
                 </a>

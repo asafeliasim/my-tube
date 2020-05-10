@@ -1,7 +1,8 @@
 import {
     SEARCH_VIDEOS,
     CLEAR_VIDEOS,
-    SET_LOADING 
+    SET_LOADING, 
+    ADD_VIDEO
 } from '../types';
 
 export default (state,action) => {
@@ -22,7 +23,13 @@ export default (state,action) => {
                 ...state,
                 videos:[],
                 loading:false
-            };  
+            };
+        case ADD_VIDEO: 
+            console.log(action.payload);
+            return{
+                ...state,
+                loading:false
+            };      
         default:
             return state;
     }

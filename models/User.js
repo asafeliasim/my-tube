@@ -17,7 +17,11 @@ const UserSchema = mongoose.Schema({
     Date:{
         type:Date,
         default:Date.now
-    }
+    },
+    videos:[ {
+        videoId: String,
+        title: String
+    }]
 });
 
 module.exports = mongoose.model('user',UserSchema);
