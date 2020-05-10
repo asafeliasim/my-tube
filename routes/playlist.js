@@ -48,6 +48,23 @@ router.post('/',auth, async(req,res)=>{
 
 });
 
+router.post('/delete',auth,async(req,res)=>{
+    try{
+        var user = await User.findById({_id:req.body.u_id});
+        var newVideos = user.videos.filter(v => v._id != req.body.v_id);
+        console.log(newVideos);
+        user.videos = [];
+        user.videos = newVideos;
+
+        await user.save();
+        console.log(user);
+        res.status(200).json(newVideos);
+    }catch(error){
+        console.error(error);
+        res.status(500).send('Server Error');
+    }    
+});
+
 
 
 module.exports = router;

@@ -14,7 +14,7 @@ export default (state,action)=> {
         case DELETE_VIDEO:
             return{
                 ...state,
-                videos: state.videos.filter(video => video.videoId !== action.payload)
+                videos: action.payload
             };
         case VIDEO_ERROR:
             return{

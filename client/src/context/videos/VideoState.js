@@ -31,17 +31,27 @@ const VideoState = props => {
         }catch(err){
             dispatch({
                 type:VIDEO_ERROR,
-                payload:err.response.msg
+                payload:err.response.message
             })
         }
     };
 
-    const deleteVideo = videoId => {
-        dispatch({
-            type: DELETE_VIDEO,
-            payload: videoId
-
-        })
+    const deleteVideo = async obj => {
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+        try{
+            var res = await axios.post('/api/playlist/delete',obj,config);
+            console.log(res);
+            dispatch({
+                type: DELETE_VIDEO,
+                payload: res.data
+            });
+        }catch(error){
+            console.error(error);
+        }       
     }
     return (
         <VideoContext.Provider

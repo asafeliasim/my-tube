@@ -1,13 +1,20 @@
 import React,{useContext} from 'react';
+import AuthContext from '../../context/auth/authContext';
 import VideoContext from '../../context/videos/videoContext';
 const UserVideoItem = ({video})=> {
-    
+    const authContext = useContext(AuthContext);
+    const {user} = authContext;
+    const {_id} = user;
     const {videoId,title,favorite} = video;
     const videoContext = useContext(VideoContext);
     const {deleteVideo} = videoContext;
 
     const onDelte = () => {
-        deleteVideo(videoId);
+        var obj = {
+            v_id:video._id,
+            u_id: _id
+        }
+        deleteVideo(obj);
     }
     // if favorite == true --> icon of star
     return (
