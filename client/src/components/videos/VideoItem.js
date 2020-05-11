@@ -26,7 +26,7 @@ const VideoItem = ({video}) => {
                 <h3>{video.snippet.title}</h3>
                 <div className="all-center m-2">
                     <p>{video.snippet.description}</p>
-                    <a href={`http://www.youtube.com/embed/${video.id.videoId}`} className="btn btn-dark my-1">Visit on youtube</a>
+                    <a href={`http://www.youtube.com/embed/${video.id.videoId}`} target="_blanck" className="btn btn-dark my-1">Visit on youtube</a>
                     <button className="btn btn-action" onClick={()=>addToPlayList(video.id.videoId,video.snippet.title)}>Add to playlist</button>
                     <button className="btn btn-light text-dark"><FaStar style={starStyle}/> add to favorite</button>
                 </div>
