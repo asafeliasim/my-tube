@@ -15,6 +15,7 @@ const UserVideoItem = ({video})=> {
             u_id: _id
         }
         deleteVideo(obj);
+        window.location.reload(false);
     }
     // if favorite == true --> icon of star
     return (
