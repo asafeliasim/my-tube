@@ -9,3 +9,6 @@ New user sign-up and then the search page will show up, user can search a video 
 The user can save videos to his playlist or goes directly to youtube page.
 
 ![](/img/mytube.png)
+
+# Key Features
+- Comfortable and simple user-interface. 
