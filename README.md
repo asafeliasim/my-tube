@@ -12,3 +12,8 @@ The user can save videos to his playlist or goes directly to youtube page.
 
 # Key Features
 - Comfortable and simple user-interface. 
+- Secure private data of the user.
+- Get and Post data from mongoDB-atlas of the current user.
+- Used youtube-DATA-API in order to get user search of his videos. limited to 5 videos because it is free trail.
+
+
