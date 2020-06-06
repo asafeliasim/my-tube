@@ -1,7 +1,7 @@
-# my-tube
+## my-tube
 My-tube is a playlist manager API
 
-## descripition
+# Descripition
 My-tube is a mern stack build with react, nodejs and mongodb. 
 The idea of this project is to lern to work with hooks. 
 
