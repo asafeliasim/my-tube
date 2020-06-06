@@ -1,5 +1,5 @@
-## my-tube
-My-tube is a playlist manager API
+## MyTubeAPP
+A ReactJS application to create your own playvideo from youtube,using you-tube DATA API 
 
 # Descripition
 My-tube is a mern stack build with react, nodejs and mongodb. 
